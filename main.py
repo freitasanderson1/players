@@ -23,3 +23,7 @@ while not nome:
       print(f'{nome} está na lista!')
       rank, nomeJogador = jogador.split('-')
       print(f'Foi encontrado o jogador {nomeJogador.strip()} na {rank.strip()}ª posição.')
+
+  print(f'{nome} não esta na lista!')
+  
+  nome = None
