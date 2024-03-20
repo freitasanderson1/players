@@ -17,7 +17,7 @@ for index, item in enumerate(player_info_containers):
 nome = None
 
 while not nome:
-  nome = input("Insira o nome de algum jogador:")
+  nome = input("Insira o nome ou parte do nome de algum jogador:")
   for jogador in listNames:
     if nome in jogador:
       print(f'{nome} está na lista!')
