@@ -1,8 +1,8 @@
-from requests import get
+import requests
 from bs4 import BeautifulSoup
 
 url = 'https://www.fifaratings.com/players'
-response = get(url)
+response = requests.get(url)
 
 html_soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -23,7 +23,10 @@ while not nome:
       print(f'{nome} está na lista!')
       rank, nomeJogador = jogador.split('-')
       print(f'Foi encontrado o jogador {nomeJogador.strip()} na {rank.strip()}ª posição.')
-
-  print(f'{nome} não esta na lista!')
-  
-  nome = None
+      found = True
+      break
+    else:
+      found = False
+      
+if not found:
+  print(f'{nome} não esta na lista!') 
